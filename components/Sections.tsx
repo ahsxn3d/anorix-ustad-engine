@@ -79,10 +79,10 @@ function Working() {
       <p className="mono text-mute">Your working</p>
       <div className="mt-4 space-y-1">
         {lines.map(([l, s], i) => (
-          <div key={l} className="flex items-center justify-between gap-4 py-1.5">
+          <div key={l} className="flex flex-col gap-1 py-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             <span className={`mono text-[16px] ${s === "bad" ? "text-ox line-through decoration-ox/60" : "text-ink"}`}>{l}</span>
             {s === "ok" && <span className="text-[13px] text-baize">✓ expanded correctly</span>}
-            {i === 2 && <span className="max-w-[22ch] text-right font-serif text-[15px] italic leading-snug text-ox">Moving −6 across makes it +6. Try this line again.</span>}
+            {i === 2 && <span className="max-w-[26ch] font-serif sm:text-right text-[15px] italic leading-snug text-ox">Moving −6 across makes it +6. Try this line again.</span>}
           </div>
         ))}
       </div>
